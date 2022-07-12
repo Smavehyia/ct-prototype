@@ -17,7 +17,7 @@ function App() {
               <Route path="/wallets" exact>
                 <Wallets />
               </Route>
-              <Route path="/transactions" exact>
+              <Route path="/transactions/:id" exact>
                 <Transactions />
               </Route>
             </Switch>

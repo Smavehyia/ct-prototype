@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AddWallet from "../components/AddWallet";
+import { Link } from "react-router-dom";
+import PageTitle from "../components/PageTitle";
 
 const TEST_ADDRESSES = [
   { address: "3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd", label: "BTC Wallet 1" },
@@ -35,11 +37,7 @@ const Wallets = () => {
   return (
     <div>
       <AddWallet addAddress={addAddress} />
-      <div>
-        <div className="page-title">
-          <h3>Wallets</h3>
-        </div>
-      </div>
+      <PageTitle title="Wallets" />
       <div className="table-section">
         <table className="table">
           <thead>
@@ -56,7 +54,20 @@ const Wallets = () => {
                   <tr key={i}>
                     {addr &&
                       Object.values(addr).map((colVal, i) => {
-                        return <td key={i}>{colVal}</td>;
+                        return (
+                          <td
+                            key={i}
+                            onClick={(e) => console.log(e.target.textContent)}
+                          >
+                            {i === 0 ? (
+                              <Link to={`/transactions/${colVal}`}>
+                                {colVal}
+                              </Link>
+                            ) : (
+                              colVal
+                            )}
+                          </td>
+                        );
                       })}
                     <td>
                       <button onClick={() => deleteAddress(addr)}>

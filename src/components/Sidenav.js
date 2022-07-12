@@ -8,9 +8,6 @@ const Sidenav = () => {
         <Link to="/wallets" className="side-nav-link">
           Wallets
         </Link>
-        <Link to="/transactions" className="side-nav-link">
-          Transactions
-        </Link>
       </div>
     </nav>
   );
