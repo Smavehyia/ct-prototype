@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header";
+import Sidenav from "./components/Sidenav";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Wallets from "./components/Wallets";
+import Transactions from "./components/Transactions";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <Header />
+        <div className="workspace">
+          <Sidenav />
+          <div className="content">
+            <Switch>
+              <Route path="/wallets" exact>
+                <Wallets />
+              </Route>
+              <Route path="/transactions" exact>
+                <Transactions />
+              </Route>
+            </Switch>
+          </div>
+        </div>
+      </div>
+    </Router>
   );
 }
 
