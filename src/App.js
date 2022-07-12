@@ -2,8 +2,8 @@ import "./App.css";
 import Header from "./components/Header";
 import Sidenav from "./components/Sidenav";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Wallets from "./components/Wallets";
-import Transactions from "./components/Transactions";
+import Wallets from "./pages/Wallets";
+import Transactions from "./pages/Transactions";
 
 function App() {
   return (

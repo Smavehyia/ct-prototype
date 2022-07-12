@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import AddWallet from "./AddWallet";
+import AddWallet from "../components/AddWallet";
 
 const TEST_ADDRESSES = [
   { address: "3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd", label: "BTC Wallet 1" },

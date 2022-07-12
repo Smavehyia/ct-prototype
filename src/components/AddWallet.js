@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { validate, getAddressInfo } from "bitcoin-address-validation";
+import { validate } from "bitcoin-address-validation";
 
 const AddWallet = ({ addAddress }) => {
   const [address, setAddress] = useState("");
