@@ -10,7 +10,7 @@ const Transactions = () => {
 
   useEffect(() => {
     axios
-      .get(`https://blockchain.info/rawaddr/${id}?cors=true`)
+      .get(`https://blockchain.info/rawaddr/${id}`)
       .then((res) => {
         setFinalBalance(res.data.finalBalance);
         setTransactions(res.data.txs);
