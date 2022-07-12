@@ -14,7 +14,7 @@ function App() {
           <Sidenav />
           <div className="content">
             <Switch>
-              <Route path="/wallets" exact>
+              <Route path="/" exact>
                 <Wallets />
               </Route>
               <Route path="/transactions/:id" exact>
